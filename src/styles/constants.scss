@@ -21,3 +21,24 @@
     display: flex;
     align-items: center;
 }
+
+@mixin button {
+    outline: none;
+    border: none;
+    background-color: none;
+    padding: 10px 25px;
+    border-radius: 2px;
+    font-size: 1.1rem;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.ml3r {
+    margin-left: 3rem;
+}
+
+.bgBlack {
+    background-color: black;
+}

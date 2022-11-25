@@ -11,7 +11,7 @@ export default function Header() {
     return (
         <div className={styles.container}>
             <div className={styles.right}>
-                <img className={styles.logo} src={logo} alt='netflix' />
+                <img className={styles.logo} src={"https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"} alt='netflix' />
                 <ul className={styles.list}>
                     <li className={styles.listItem}>Home</li>
                     <li className={styles.listItem}>Series</li>

@@ -30,6 +30,9 @@ const bannerSlice = createSlice({
 export const fetchBanners = createAsyncThunk("Banners/fetch", async () => {
     try {
         const {data} = await axios.get(`${baseUrl}movie/now_playing/?api_key=${v3}&language=en-US&page=1`);
+        let {results} = data;
+        results = results.splice(0,5);
+        data.results = results;
         return data;
     } catch (error) {
         return error;
