@@ -1,0 +1,25 @@
+@import "./constants.scss";
+
+
+.container {
+    @include flexBox;
+    justify-content: space-between;
+    @include robotoRegular;
+    .right {
+        @include flexBox;
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+    }
+    .left {
+        @include flexBox;
+    }
+    .list {
+        @include flexBox;
+        list-style: none;
+        .listItem {
+            padding: 0.5rem;
+        }
+    }
+}
