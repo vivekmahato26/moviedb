@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Carousel } from 'antd';
+import { InfoCircleOutlined, CaretRightOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 import { fetchBanners } from '../redux/slice/bannerSlice';
 import { imgUrl } from "../apikeys";
-import {InfoCircleOutlined,CaretRightOutlined} from "@ant-design/icons";
 
 import styles from "../styles/banner.module.scss";
 export default function Banner() {
@@ -28,7 +29,9 @@ export default function Banner() {
                                 <p className={styles.language}>{e.original_language}</p>
                                 <p className={styles.desc}>{e.overview}</p>
                                 <button className={styles.buttonL}><CaretRightOutlined /> Play</button>
-                                <button className={styles.buttonR}> <InfoCircleOutlined /> More Info</button>
+                                <Link to={"/details/" + e.id}>
+                                    <button className={styles.buttonR}> <InfoCircleOutlined /> More Info</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
